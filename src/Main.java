@@ -21,5 +21,17 @@ public class Main {
 
         System.out.println(fullName);
 
+//        4 Задание
+
+        fullName = "Ivanov Ivan Ivanovich";
+        int indexFist = fullName.indexOf(" ");
+        fistName = fullName.substring(0,indexFist);
+        int indexMiddle = fullName.indexOf(" ", indexFist + 1);
+        middleName = fullName.substring(indexFist + 1, indexMiddle);
+        lastName = fullName.substring(indexMiddle + 1);
+        System.out.println(fistName);
+        System.out.println(middleName);
+        System.out.println(lastName);
+
     }
 }
