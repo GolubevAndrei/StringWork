@@ -47,5 +47,24 @@ public class Main {
         }
         System.out.println(chFullName);
 
+//        6 Задание
+
+        String fist = "135";
+        String second = "246";
+        String str = fist + second;
+        StringBuilder sb = new StringBuilder(fist + second);
+        String min = str.substring(0, 1);
+        for (int i = 0; i < sb.length() - 1; i++) {
+            if (min.compareTo(str.substring(i, i + 1)) > 0) {
+                min = str.substring(i, i + 1);
+            }
+        }
+        for (int i = 0; i < sb.length() - 1; i++) {
+            int position = str.substring(i, i + 1).compareTo(min);
+            if (position >= 0){
+                sb.setCharAt(position, str.substring(i, i + 1).charAt(0));
+            }
+        }
+      System.out.println(sb);
     }
 }
