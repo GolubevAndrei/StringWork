@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -32,6 +34,18 @@ public class Main {
         System.out.println(fistName);
         System.out.println(middleName);
         System.out.println(lastName);
+
+//        5 Задание
+
+        fullName = "ivanov ivan ivanovich";
+        char[] chFullName = fullName.toCharArray();
+        chFullName[0] = Character.toUpperCase(chFullName[0]);
+        for (int i = 0; i < chFullName.length; i++) {
+            if (chFullName[i] == ' ') {
+                chFullName[i + 1] = Character.toUpperCase(chFullName[i + 1]);
+            }
+        }
+        System.out.println(chFullName);
 
     }
 }
